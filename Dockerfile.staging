@@ -1,0 +1,34 @@
+# --- Staging Dockerfile ---
+FROM node:22-alpine AS builder
+
+WORKDIR /app
+
+# Copy and install dependencies
+COPY package.json package-lock.json* pnpm-lock.yaml* yarn.lock* ./
+RUN npm install
+
+# Copy source code
+COPY . .
+
+# Pass environment variable at build time
+ARG NEXT_PUBLIC_API_URL
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
+ENV NODE_ENV=production
+
+# Build Next.js app
+RUN npm run build
+
+# --- Runner image ---
+FROM node:22-alpine AS runner
+
+WORKDIR /app
+ENV NODE_ENV=production
+
+# Copy standalone output
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/public ./public
+
+EXPOSE 3000
+
+CMD ["node", "server.js"]
