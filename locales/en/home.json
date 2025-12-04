@@ -1,0 +1,18 @@
+{
+  "welcomeBanner": {
+    "title": "Welcome to the Home Page!",
+    "subtitle": "Enjoy exploring the sandbox frontend example."
+  },
+  "userForm": {
+    "title": "User Form",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "submit": "Submit",
+    "submittedName": "Submitted Name:",
+    "submittedEmail": "Submitted Email:"
+  },
+  "randomCard": {
+    "title": "Random Card",
+    "description": "This is a random card component. You can put anything here!"
+  }
+}

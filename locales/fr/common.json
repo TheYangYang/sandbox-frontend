@@ -1,0 +1,13 @@
+{
+  "header": {
+    "title": "Mon application Sandbox",
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "contact": "Contact"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Mon application Sandbox. Tous droits réservés."
+  }
+}

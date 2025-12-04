@@ -1,0 +1,18 @@
+{
+  "welcomeBanner": {
+    "title": "Bienvenue sur la page d'accueil !",
+    "subtitle": "Profitez de l'exploration de l'exemple frontend sandbox."
+  },
+  "userForm": {
+    "title": "Formulaire utilisateur",
+    "nameLabel": "Nom",
+    "emailLabel": "E-mail",
+    "submit": "Envoyer",
+    "submittedName": "Nom soumis :",
+    "submittedEmail": "E-mail soumis :"
+  },
+  "randomCard": {
+    "title": "Carte aléatoire",
+    "description": "Ceci est un composant de carte aléatoire. Vous pouvez mettre ce que vous voulez ici !"
+  }
+}
